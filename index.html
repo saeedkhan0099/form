@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], select, textarea, input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+      <br>
+    <h2>Job Application Form</h2>
+
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <br>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="firstname" required>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lastname" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+        </fieldset>
+
+        <fieldset>
+            <br>
+            <legend>Job Details</legend>
+            <br>
+            <label for="position">Position Applying For:</label>
+            <input type="text" id="position" name="position" required>
+
+            <label for="experience">Years of Experience:</label>
+            <select id="experience" name="experience" required>
+                <option value="">Select Experience</option>
+                <option value="0-1">0-1 years</option>
+                <option value="2-4">2-4 years</option>
+                <option value="5-7">5-7 years</option>
+                <option value="8+">8+ years</option>
+            </select>
+        </fieldset>
+         <br>
+        <fieldset>
+            <br>
+            <legend>Skills and Resume</legend>
+            <br>
+            <label for="skills">Skills:</label>
+            <textarea id="skills" name="skills" rows="4" placeholder="List your skills..." required></textarea>
+             <br>
+             <label for="resume">Upload Resume (PDF or DOC):</label>
+             <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+             <br>
+             <label for="coverLetter">Upload Cover Letter (Optional):</label>
+             <input type="file" id="coverLetter" name="coverLetter" accept=".pdf,.doc,.docx">
+             <br>
+             <label for="portfolio">Upload Portfolio (Optional, multiple files):</label>
+             <input type="file" id="portfolio" name="portfolio[]" accept=".jpg,.png,.pdf,.zip" multiple>
+        </fieldset>
+        <br>
+        <fieldset>
+            <br>
+            <legend>Availability</legend>
+            <label for="availability">When can you start?</label>
+            <input type="date" id="availability" name="availability" required>
+            <br>
+        </fieldset>
+           <br>
+        <input type="submit" value="Submit Application">
+    </form>
+
+
+
+
+
+
+
+   
